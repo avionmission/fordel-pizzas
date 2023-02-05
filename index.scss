@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -56,9 +58,32 @@ header{
     }
 }
 
+@media screen and (max-width:800px) {
+    header {
+        ul{
+            &.menu-items {
+                li{
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &.logo-wrap{
+                img{
+                    height: 50px;
+                }
+            }
+        }
+
+        
+    }
+}
+
 .container {
     width: 100%;
     display: flex;
+    padding: 10px;
     flex-direction: row;
     align-items: center;
     height: calc(100vh - 100px);
@@ -67,6 +92,7 @@ header{
     .left {
         margin: 80px;
         margin-top: 0px;
+        margin-left: 0px;
         h1{
             font-family: 'Pacifico', sans-serif;
             font-size: 60px;
@@ -94,6 +120,7 @@ header{
     .right {
         width: 600px;
         height: 600px;
+        position: relative;
 
         img {
             width: 600px;
@@ -116,9 +143,54 @@ header{
     }
 }
 
+@media screen and (max-width: 1250px) {
+    .container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .popular-pizzas-wrap {
+        .pizzas{
+            grid-template-rows: auto;
+
+            .pizza{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    header {
+        ul{
+            &.menu-items {
+                li{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .container {
+        padding-top: 15px;
+        .left {
+            margin-left: 10px;
+            h1 {
+                font-size: 40px;
+            }
+            p{
+                font-size: 15px;
+                margin-left: 0;
+            }
+            #countdown {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
 .popular-pizzas-wrap {
     margin: 0 auto;
-    margin-top: 60px;
+    margin-bottom: 100px;
     max-width: 1320px;
 
     .pizzas {
