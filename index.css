@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px; }
+  header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    header ul.menu-items {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      header ul.menu-items li {
+        font-size: 16px; }
+        header ul.menu-items li:not(:last-child) {
+          margin-right: 10px; }
+    header ul.logo-wrap img {
+      height: 80px; }
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  background-image: url(./images/pizza.jpg);
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover; }
+  .container .left {
+    width: 1200px;
+    margin: 30px; }
+    .container .left h1 {
+      font-size: 80px;
+      margin: 10px; }
+    .container .left p {
+      font-size: 24px; }
+
+.popular-pizzas-wrap {
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 1320px; }
+  .popular-pizzas-wrap .pizzas {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    align-content: space-around;
+    justify-content: space-between; }
+  .popular-pizzas-wrap .pizza {
+    width: 100%; }
+    .popular-pizzas-wrap .pizza img {
+      width: 100%;
+      max-width: 300px;
+      object-fit: cover; }
+
+/*# sourceMappingURL=index.css.map */

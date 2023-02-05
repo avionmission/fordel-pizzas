@@ -1,0 +1,90 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        &.menu-items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                font-size: 16px;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &.logo-wrap {
+            img {
+                height: 80px;
+            }
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px);
+    background-image: url(./images/pizza.jpg);
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+
+    .left {
+        width: 1200px;
+        margin: 30px;
+
+        h1{
+            font-size: 80px;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 24px;
+        }
+    }
+}
+
+.popular-pizzas-wrap {
+    margin: 0 auto;
+    margin-top: 60px;
+    max-width: 1320px;
+
+    .pizzas {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        align-content: space-around;
+        justify-content: space-between;
+    }
+
+    .pizza {
+        width: 100%;
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            object-fit: cover;
+        }
+    }
+}
+
