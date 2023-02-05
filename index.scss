@@ -3,7 +3,8 @@ body {
     margin: 0;
     box-sizing: border-box;
     width: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(240, 41, 41);
 }
 
 header{
@@ -11,6 +12,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
+    background-color: rgb(218, 37, 37);
 
     ul {
         margin: 0;
@@ -19,7 +21,9 @@ header{
 
         &.menu-items {
             display: flex;
+            flex-direction: row;
             align-items: center;
+            padding-right: 15px;
             justify-content: center;
 
             li {
@@ -27,6 +31,19 @@ header{
 
                 &:not(:last-child) {
                     margin-right: 10px;
+                }
+
+                a {
+                    margin-left: 15px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: rgb(255, 255, 255);
+                    font-size: 1.4rem;
+                    display: inline-block;
+                }
+
+                a:hover {
+                    color: rgb(253, 183, 90);
                 }
             }
         }
@@ -42,25 +59,59 @@ header{
 .container {
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
     height: calc(100vh - 100px);
-    background-image: url(./images/pizza.jpg);
-    background-position: center center;
-    background-repeat: none;
-    background-size: cover;
+    justify-content: space-around;
 
     .left {
-        width: 1200px;
-        margin: 30px;
-
+        margin: 80px;
+        margin-top: 0px;
         h1{
-            font-size: 80px;
-            margin: 10px;
+            font-family: 'Pacifico', sans-serif;
+            font-size: 60px;
+            margin: 0px;
+            color: white;
         }
 
         p {
             font-size: 24px;
+            margin-left: 20px;
+            color: wheat;
+        }
+
+        #countdown {
+            font-family: 'Graduate', cursive;
+            display: inline;
+            font-size: 60px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 15px;
+        }
+    }
+
+    .right {
+        width: 600px;
+        height: 600px;
+
+        img {
+            width: 600px;
+        }
+
+        #leaves {
+            position: absolute;
+            z-index: 3;
+        }
+
+        #pizza-img {
+            position: absolute;
+            z-index: 2;
+        }
+
+        #veg {
+            position: absolute;
+            z-index: 1;
         }
     }
 }
@@ -79,6 +130,12 @@ header{
 
     .pizza {
         width: 100%;
+        background-color: black;
+        color: aliceblue;
+        margin: 5px;
+        padding: 15px;
+        display: inline;
+        border-radius: 15px;
 
         img {
             width: 100%;

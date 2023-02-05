@@ -7,7 +7,9 @@
     <title>Fordel Pizzas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -16,56 +18,86 @@
             <li><img src="./images/logo.png"></li>
         </ul>
 
-        <ul>
-            <li>Login</li>
-            <li>Sign up</li>
+        <ul class="menu-items">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign up</a></li>
         </ul>
     </header>
 
     <div class="container">
         <div class="left">
             <h1>The best Pizzas in town!</h1>
-            <p>Because you deserve duplicate pizzas??</p>
+            <p style="margin-top: -6px;">Because you deserve duplicate pizzas?? 👨🏽‍🍳🍕</p>
+            <br>
+            <p style="color: white;">Limited Time Offers End in:</p>
+            <p id="countdown"></p>
+        </div>
+
+        <div class="right">
+            <img src="images/leaves.png" id="leaves">
+            <img src="images/pizza.png" id="pizza-img">
+            <img src="images/vegetables.png" id="veg">
         </div>
     </div>
 
     <section class="popular-pizzas-wrap">
         <div class="pizzas">
             <div class="pizza">
-                <img src="" alt="">
+                <img src="images/pizza1.jpeg" alt="">
                 <h1>Pizza Name here</h1>
                 <p>Pizza description here</p>
                 <p>Rs. 812.30</p>
             </div>
 
             <div class="pizza">
-                <img src="" alt="">
+                <img src="images/pizza2.jpeg" alt="">
                 <h1>Pizza Name here</h1>
                 <p>Pizza description here</p>
                 <p>Rs. 812.30</p>
             </div>
             
             <div class="pizza">
-                <img src="" alt="">
-                <h1>Pizza Name here</h1>
-                <p>Pizza description here</p>
-                <p>Rs. 812.30</p>
-            </div>
-
-            <div class="pizza">
-                <img src="" alt="">
-                <h1>Pizza Name here</h1>
-                <p>Pizza description here</p>
-                <p>Rs. 812.30</p>
-            </div>
-
-            <div class="pizza">
-                <img src="" alt="">
+                <img src="images/pizza3.jpeg" alt="">
                 <h1>Pizza Name here</h1>
                 <p>Pizza description here</p>
                 <p>Rs. 812.30</p>
             </div>
         </div>
     </section>
+
+    <script>
+        window.onscroll = function () {
+            scrollRotatePizza();
+        };
+
+        function scrollRotatePizza() {
+            let image = document.getElementById("pizza-img")
+            image.style.transform = "rotate(" + window.pageYOffset/4 + "deg)";
+        }
+
+        // Countdown timer code
+        
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 7, 2023 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>

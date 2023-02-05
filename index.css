@@ -3,61 +3,125 @@ body {
   margin: 0;
   box-sizing: border-box;
   width: 100%;
-  font-family: 'Poppins', sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(240, 41, 41);
+}
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px; }
-  header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-    header ul.menu-items {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      header ul.menu-items li {
-        font-size: 16px; }
-        header ul.menu-items li:not(:last-child) {
-          margin-right: 10px; }
-    header ul.logo-wrap img {
-      height: 80px; }
+  padding: 15px 30px;
+  background-color: rgb(218, 37, 37);
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header ul.menu-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 15px;
+  justify-content: center;
+}
+header ul.menu-items li {
+  font-size: 16px;
+}
+header ul.menu-items li:not(:last-child) {
+  margin-right: 10px;
+}
+header ul.menu-items li a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  display: inline-block;
+}
+header ul.menu-items li a:hover {
+  color: rgb(253, 183, 90);
+}
+header ul.logo-wrap img {
+  height: 80px;
+}
 
 .container {
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   height: calc(100vh - 100px);
-  background-image: url(./images/pizza.jpg);
-  background-position: center center;
-  background-repeat: none;
-  background-size: cover; }
-  .container .left {
-    width: 1200px;
-    margin: 30px; }
-    .container .left h1 {
-      font-size: 80px;
-      margin: 10px; }
-    .container .left p {
-      font-size: 24px; }
+  justify-content: space-around;
+}
+.container .left {
+  margin: 80px;
+  margin-top: 0px;
+}
+.container .left h1 {
+  font-family: "Pacifico", sans-serif;
+  font-size: 60px;
+  margin: 0px;
+  color: white;
+}
+.container .left p {
+  font-size: 24px;
+  margin-left: 20px;
+  color: wheat;
+}
+.container .left #countdown {
+  font-family: "Graduate", cursive;
+  display: inline;
+  font-size: 60px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+.container .right {
+  width: 600px;
+  height: 600px;
+}
+.container .right img {
+  width: 600px;
+}
+.container .right #leaves {
+  position: absolute;
+  z-index: 3;
+}
+.container .right #pizza-img {
+  position: absolute;
+  z-index: 2;
+}
+.container .right #veg {
+  position: absolute;
+  z-index: 1;
+}
 
 .popular-pizzas-wrap {
   margin: 0 auto;
   margin-top: 60px;
-  max-width: 1320px; }
-  .popular-pizzas-wrap .pizzas {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    align-content: space-around;
-    justify-content: space-between; }
-  .popular-pizzas-wrap .pizza {
-    width: 100%; }
-    .popular-pizzas-wrap .pizza img {
-      width: 100%;
-      max-width: 300px;
-      object-fit: cover; }
-
-/*# sourceMappingURL=index.css.map */
+  max-width: 1320px;
+}
+.popular-pizzas-wrap .pizzas {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  align-content: space-around;
+  justify-content: space-between;
+}
+.popular-pizzas-wrap .pizza {
+  width: 100%;
+  background-color: black;
+  color: aliceblue;
+  margin: 5px;
+  padding: 15px;
+  display: inline;
+  border-radius: 15px;
+}
+.popular-pizzas-wrap .pizza img {
+  width: 100%;
+  max-width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=index.css.map */
