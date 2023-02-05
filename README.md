@@ -1,0 +1,1 @@
+A frontend project to practice and demonstrate responsive website design using html, css and javascript.
